@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>easy-donkey</artifactId>
+        <groupId>com.orange.donkey</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>donkey-startup</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.orange.donkey</groupId>
+            <artifactId>donkey-security-app</artifactId>
+            <version>${donkey.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.orange.donkey</groupId>
+            <artifactId>donkey-security-authorize</artifactId>
+            <version>${donkey.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.orange.donkey</groupId>
+            <artifactId>donkey-trip</artifactId>
+            <version>${donkey.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.orange.donkey</groupId>
+            <artifactId>donkey-person</artifactId>
+            <version>${donkey.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.orange.donkey</groupId>
+            <artifactId>donkey-travels</artifactId>
+            <version>${donkey.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.orange.donkey</groupId>
+            <artifactId>donkey-shop</artifactId>
+            <version>${donkey.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.orange.donkey</groupId>
+            <artifactId>donkey-order</artifactId>
+            <version>${donkey.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.orange.donkey</groupId>
+            <artifactId>donkey-activity</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.5.3.RELEASE</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                            <goal>stop</goal>
+                        </goals>
+
+                    </execution>
+                </executions>
+
+                <configuration>
+                    <mainClass>com.orange.AppStart</mainClass>
+                </configuration>
+            </plugin>
+
+        </plugins>
+        <finalName>donkey</finalName>
+    </build>
+    <properties>
+        <skiptests>true</skiptests>
+    </properties>
+
+</project>
